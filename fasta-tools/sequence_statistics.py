@@ -19,14 +19,14 @@ def sequence_statistics(sequence):
         "G": g_count,
         "C": c_count,
         "N": n_count,
-        "GC_content": gc_content,
-        "AT_content": at_content
+        "GC_content": gc_percent,
+        "AT_content": at_percent
   }
 dna = "ATGCTCGCGTAGCTGACGTGATGCTGATA"
 result = sequence_statistics(dna)
-for statistiics, Value in result.items():
-  if statistic in ["GC_content", "AT_content"]:
-        print(f"{statistic}: {value:.2f}%")
+for statistics, Value in result.items():
+    if statistics in ["GC_content", "AT_content"]:
+        print(f"{statistics}: {Value:.2f}%")
     else:
-        print(f"{statistic}: {value}")
+        print(f"{statistics}: {Value}")
   
